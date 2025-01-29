@@ -7,7 +7,9 @@ def get_state(db):
     """Check the state from the database."""
     state_doc = db['login_stated'].find_one({"_id": ObjectId(stateID)})
 
+    print(state_doc, "Status")
     if state_doc['state'] == 'open':
+        print("State is open")
         return state_doc.get('value', 'open')
     return 'closed'
 

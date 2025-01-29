@@ -2,6 +2,8 @@ import tkinter as tk
 import win32print
 import win32ui
 
+import login_window
+
 def send_test_print():
     """Send a test print to the thermal printer."""
     try:
@@ -22,6 +24,8 @@ def logout(pos_window):
     """Log out and close the POS window."""
     pos_window.quit()
     pos_window.destroy()
+
+    login_window.show_login_window()
 
 def show_main_window():
     """Show the main POS system window."""
@@ -95,5 +99,4 @@ def show_main_window():
 
     pos_window.mainloop()
 
-# Run the main POS window
-show_main_window()
+

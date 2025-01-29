@@ -11,7 +11,7 @@ def main():
     
     if state == 'open':
         show_main_window()
-    else:
+    elif state == 'closed':
         show_login_window()
 
 if __name__ == "__main__":
